@@ -1,0 +1,6 @@
+gesdinet_jwt_refresh_token:
+    ttl: 86400
+    ttl_update: false
+    firewall: api
+    refresh_token_class: App\Security\Entity\RefreshToken
+    user_identity_field: id
