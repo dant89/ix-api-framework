@@ -16,16 +16,13 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class CompanyProvider implements PayloadAwareUserProviderInterface
 {
-    protected array $defaultRoles;
     protected string $appEnv;
     protected LoggerInterface $logger;
 
     public function __construct(
-        array $defaultRoles = [],
         string $appEnv = 'prod',
         LoggerInterface $logger = null
     ) {
-        $this->defaultRoles = $defaultRoles;
         $this->appEnv = $appEnv;
         $this->logger = $logger ?? new NullLogger();
     }
@@ -34,7 +31,7 @@ class CompanyProvider implements PayloadAwareUserProviderInterface
     {
         $subject = $this->loadSubjectByCompanyId($subjectId);
 
-        $user = new User($subject, $this->defaultRoles);
+        $user = new User($subject, []);
         if (null !== $apiKey) {
             $apiKeyPermissions = $apiKey->getPermissions();
             $roles = $this->rolesFromPermissions($apiKeyPermissions);
@@ -115,14 +112,10 @@ class CompanyProvider implements PayloadAwareUserProviderInterface
             try {
                 $roles [] = $roleFactory->role($permissionName);
             } catch (\InvalidArgumentException $e) {
-                // Log at debug here, if we're on a dev server, else rethrow
-                if ($this->appEnv === 'dev') {
-                    $this->logger->debug(
-                        "Tried to auth with invalid permission '$permissionName', not valid on this branch?"
-                    );
-                } else {
-                    throw $e;
-                }
+                $this->logger->debug(
+                    "Tried to auth with invalid permission '$permissionName'"
+                );
+                throw $e;
             }
         }
         return $roles;

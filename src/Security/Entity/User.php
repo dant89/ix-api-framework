@@ -108,17 +108,6 @@ class User implements UserInterface
         $this->appliedRoles = array_values($rolesToKeep);
     }
 
-    public function getAvailableRoleByName(string $name): ?string
-    {
-        foreach ($this->availableRoles as $role) {
-            if ($name === (string)$role) {
-                return $role;
-            }
-        }
-
-        return null;
-    }
-
     /**
      * Normalise roles for comparison purposes
      */

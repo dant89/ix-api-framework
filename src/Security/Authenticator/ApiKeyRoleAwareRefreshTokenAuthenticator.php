@@ -112,13 +112,6 @@ class ApiKeyRoleAwareRefreshTokenAuthenticator extends RefreshTokenAuthenticator
         if (method_exists($user, 'setAppliedRoles')) {
             // We limit the roles a user asserts according to those that the refresh token permits
             $newRoles = $refreshToken->getPermissionStrings();
-            $implicitRoles = ['ROLE_USER']; // Not stored in DB
-            foreach ($implicitRoles as $roleName) {
-                if ($role = $user->getAvailableRoleByName($roleName)) {
-                    $newRoles[] = $role;
-                }
-            }
-
             $user->setAppliedRoles($newRoles);
         } else {
             throw new UnexpectedValueException('Unexpected User class: ' . get_class($user));

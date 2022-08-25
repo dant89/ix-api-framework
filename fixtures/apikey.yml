@@ -1,0 +1,8 @@
+\App\Security\Entity\ApiKey:
+  apikey_valid_key:
+    name: 'Known Valid API key'
+    apiKey: 'KEYyH9o18yK4PaBtzK7p9inagwR0PCoCfADbYHmHF5FId9kjwB'
+    secret: 'SECRETCB9UJnsGn5KpfhK1yHDR9rAsO1bQ3mRQwxJ7GJthhpkt'
+    companyId: '2374019a-6737-3990-ab19-9a5c1f6e2b60'
+    createdAt: <dateTime()>
+    permissions: '@permission_{GET_PRODUCT, GET_PRODUCTS}'

@@ -1,0 +1,13 @@
+\App\Security\Entity\RefreshToken:
+  refresh_token_valid:
+    refresh_token: 'VALIDREFRESHjalksjioqruioqureoiwfhjskldjfklsjfksldjflksdjfl'
+    sub: '2374019a-6737-3990-ab19-9a5c1f6e2b60'
+    valid: <dateTimeBetween('+ 1 hour','+1 day')>
+    apiKey: '@apikey_valid_key'
+    permissions: ['@permission_GET_PRODUCT','@permission_GET_PRODUCTS']
+
+  refresh_token_past:
+    refresh_token: 'EXPIREDREFRESHjasjioqruioqureoiwfhjskldjfklsjfksldjflksdjfl'
+    sub: '2374019a-6737-3990-ab19-9a5c1f6e2b60'
+    valid: <dateTimeBetween('- 1 day','- 1 hour')>
+    apiKey: '@apikey_valid_key'

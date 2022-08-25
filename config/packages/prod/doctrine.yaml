@@ -1,4 +1,5 @@
 doctrine:
+    # TODO check vs tsi-api
     orm:
         auto_generate_proxy_classes: false
         query_cache_driver:

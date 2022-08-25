@@ -60,7 +60,6 @@ services:
 
     App\Security\Authentication\Provider\CompanyProvider:
         arguments:
-            $defaultRoles: [ROLE_USER]
             $appEnv: '%env(APP_ENV)%'
             $logger: '@logger'
 
@@ -108,3 +107,7 @@ services:
             - "@lexik_jwt_authentication.jwt_manager"
             - '@Symfony\Component\EventDispatcher\EventDispatcherInterface'
             - '@logger'
+
+    App\Envelope\Service\EnvelopeService:
+        arguments:
+            - '%env(APP_DEBUG)%'

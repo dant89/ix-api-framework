@@ -46,6 +46,21 @@
     "codeception/lib-asserts": {
         "version": "2.0.0"
     },
+    "codeception/lib-innerbrowser": {
+        "version": "2.0.1"
+    },
+    "codeception/module-asserts": {
+        "version": "2.0.1"
+    },
+    "codeception/module-doctrine2": {
+        "version": "2.0.0"
+    },
+    "codeception/module-rest": {
+        "version": "2.0.1"
+    },
+    "codeception/module-symfony": {
+        "version": "2.1.1"
+    },
     "codeception/phpunit-wrapper": {
         "version": "9.0.6"
     },
@@ -75,6 +90,9 @@
     },
     "doctrine/common": {
         "version": "3.2.1"
+    },
+    "doctrine/data-fixtures": {
+        "version": "1.5.1"
     },
     "doctrine/dbal": {
         "version": "3.2.1"
@@ -135,6 +153,9 @@
     "doctrine/sql-formatter": {
         "version": "1.1.2"
     },
+    "fakerphp/faker": {
+        "version": "v1.17.0"
+    },
     "fig/link-util": {
         "version": "1.1.2"
     },
@@ -146,6 +167,23 @@
     },
     "guzzlehttp/psr7": {
         "version": "2.1.0"
+    },
+    "hautelook/alice-bundle": {
+        "version": "2.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.1",
+            "ref": "ff94d76b2ec0c552b5d67d401f59ab8fd62f3d5f"
+        },
+        "files": [
+            "config/packages/dev/hautelook_alice.yaml",
+            "config/packages/test/hautelook_alice.yaml",
+            "fixtures/.gitignore"
+        ]
+    },
+    "justinrainbow/json-schema": {
+        "version": "5.2.11"
     },
     "laminas/laminas-code": {
         "version": "4.5.1"
@@ -173,6 +211,19 @@
     },
     "namshi/jose": {
         "version": "7.2.3"
+    },
+    "nelmio/alice": {
+        "version": "3.9",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.2",
+            "ref": "0b9900ece737bec7752e4155c0164639dd9b0cb0"
+        },
+        "files": [
+            "config/packages/dev/nelmio_alice.yaml",
+            "config/packages/test/nelmio_alice.yaml"
+        ]
     },
     "nelmio/cors-bundle": {
         "version": "2.2",
@@ -311,8 +362,14 @@
     "sebastian/version": {
         "version": "3.0.2"
     },
+    "softcreatr/jsonpath": {
+        "version": "0.7.5"
+    },
     "symfony/asset": {
         "version": "v5.4.0"
+    },
+    "symfony/browser-kit": {
+        "version": "v5.4.2"
     },
     "symfony/cache": {
         "version": "v5.4.2"
@@ -345,6 +402,9 @@
         "version": "v2.5.0"
     },
     "symfony/doctrine-bridge": {
+        "version": "v5.4.2"
+    },
+    "symfony/dom-crawler": {
         "version": "v5.4.2"
     },
     "symfony/dotenv": {
@@ -533,6 +593,15 @@
     },
     "symfony/yaml": {
         "version": "v5.4.2"
+    },
+    "theofidry/alice-data-fixtures": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fe5a50faf580eb58f08ada2abe8afbd2d4941e05"
+        }
     },
     "theseer/tokenizer": {
         "version": "1.2.1"

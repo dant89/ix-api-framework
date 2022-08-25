@@ -15,4 +15,9 @@ abstract class AbstractRole
     {
         return $this->role;
     }
+
+    public function __toString(): string
+    {
+        return $this->role;
+    }
 }
