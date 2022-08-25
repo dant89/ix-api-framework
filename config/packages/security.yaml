@@ -12,21 +12,21 @@ security:
             security: false
 
         docs:
-            pattern: ^/api/v1($|/docs|/index.(html|json))
+            pattern: ^/api/v2($|/docs|/index.(html|json))
             security: false
 
         auth_refresh:
-            pattern: ^/api/v1/auth/refresh
+            pattern: ^/api/v2/auth/refresh
             stateless: true
             anonymous: true
             provider: company
 
         auth:
-            pattern: ^/api/v1/auth/token
+            pattern: ^/api/v2/auth/token
             stateless: true
             anonymous: false
             key_secret_login:
-                check_path: /api/v1/auth/token
+                check_path: /api/v2/auth/token
                 username_path: api_key
                 password_path: api_secret
                 success_handler: lexik_jwt_authentication.handler.authentication_success
@@ -44,6 +44,6 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/api/v1/auth, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/v2/auth, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
 

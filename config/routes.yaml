@@ -1,7 +1,7 @@
 auth:
-  path: /api/v1/auth/token
+  path: /api/v2/auth/token
   methods: [POST]
 
 auth_refresh:
-  path:     /api/v1/auth/refresh
+  path:     /api/v2/auth/refresh
   controller: App\Security\Authentication\Controller\KeySecretRefreshToken::refresh

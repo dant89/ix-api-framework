@@ -24,8 +24,8 @@ final class JwtDecorator implements OpenApiFactoryInterface
         $authPathItem = $this->addToken($schemas);
         $refreshPathItem = $this->addRefresh($schemas);
 
-        $openApi->getPaths()->addPath('/api/v1/auth/token', $authPathItem);
-        $openApi->getPaths()->addPath('/api/v1/auth/refresh', $refreshPathItem);
+        $openApi->getPaths()->addPath('/api/v2/auth/token', $authPathItem);
+        $openApi->getPaths()->addPath('/api/v2/auth/refresh', $refreshPathItem);
         return $openApi;
     }
 
@@ -36,12 +36,12 @@ final class JwtDecorator implements OpenApiFactoryInterface
             'description' => 'An authentication request.',
             'properties' => [
                 'api_key' => [
-                    'description' => 'Your LINX api key.',
+                    'description' => 'Your API key.',
                     'type' => 'string',
                     'required' => true,
                 ],
                 'api_secret' => [
-                    'description' => 'Your LINX api secret.',
+                    'description' => 'Your API secret.',
                     'type' => 'string',
                     'required' => true,
                 ],

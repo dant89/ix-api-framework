@@ -10,8 +10,8 @@ class AuthTest extends ApiTestCase
     const VALID_API_SECRET = 'SECRETCB9UJnsGn5KpfhK1yHDR9rAsO1bQ3mRQwxJ7GJthhpkt';
     const VALID_REFRESH_TOKEN = 'VALIDREFRESHjalksjioqruioqureoiwfhjskldjfklsjfksldjflksdjfl';
     const EXPIRED_REFRESH_TOKEN = 'EXPIREDREFRESHjasjioqruioqureoiwfhjskldjfklsjfksldjflksdjfl';
-    const TOKEN_ENDPOINT = '/api/v1/auth/token';
-    const REFRESH_ENDPOINT = '/api/v1/auth/refresh';
+    const TOKEN_ENDPOINT = '/api/v2/auth/token';
+    const REFRESH_ENDPOINT = '/api/v2/auth/refresh';
 
     public function testAuthSuccess()
     {
@@ -31,8 +31,8 @@ class AuthTest extends ApiTestCase
             $this->assertArrayHasKey($key, $jwtPayload);
         }
 
-        $this->assertContains('GET_PRODUCT', $jwtPayload['roles']);
-        $this->assertContains('GET_PRODUCTS', $jwtPayload['roles']);
+        $this->assertContains('GET_PRODUCT_OFFERING', $jwtPayload['roles']);
+        $this->assertContains('GET_PRODUCT_OFFERINGS', $jwtPayload['roles']);
     }
 
     public function testAuthFailure()
@@ -110,9 +110,9 @@ class AuthTest extends ApiTestCase
             'JWT token generated must have refresh token permissions, got ' . implode(',', $jwtRoles)
         );
 
-        $this->assertContains('GET_PRODUCT', $jwtRoles);
-        $this->assertContains('GET_PRODUCTS', $jwtRoles);
-        $this->assertNotContains('DELETE_PRODUCTS', $jwtRoles);
+        $this->assertContains('GET_PRODUCT_OFFERING', $jwtRoles);
+        $this->assertContains('GET_PRODUCT_OFFERINGS', $jwtRoles);
+        $this->assertNotContains('DELETE_GET_PRODUCT_OFFERING', $jwtRoles);
     }
 
     public function testUseInvalidRefreshToken()

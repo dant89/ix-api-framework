@@ -4,28 +4,16 @@ declare(strict_types=1);
 
 namespace DoctrineMigrations;
 
-use Doctrine\DBAL\Schema\Schema;
-use Doctrine\Migrations\AbstractMigration;
+use App\Migrations\AbstractPermissionMigration;
+use App\Security\Role\RoleFactory;
 
-/**
- * Auto-generated Migration: Please modify to your needs!
- */
-final class Version20220113152111 extends AbstractMigration
+final class Version20220113152111 extends AbstractPermissionMigration
 {
-    public function getDescription(): string
+    protected function getPermissions(): array
     {
-        return '';
-    }
-
-    public function up(Schema $schema): void
-    {
-        // this up() migration is auto-generated, please modify it to your needs
-
-    }
-
-    public function down(Schema $schema): void
-    {
-        // this down() migration is auto-generated, please modify it to your needs
-
+        return [
+            RoleFactory::GET_PRODUCT_OFFERING,
+            RoleFactory::GET_PRODUCT_OFFERINGS,
+        ];
     }
 }

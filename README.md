@@ -1,7 +1,7 @@
 # ix-api-framework
 
 - IX-API Project: https://ix-api.net/
-- IX-API V1 Schema: https://docs.ix-api.net/v1/redoc
+- IX-API V2 Schema: https://docs.ix-api.net/v2/redoc
 
 ## What is this framework?
 The aim of this project is to provide a base implementation template for the IX-API, this should make it simpler and 
@@ -22,5 +22,8 @@ business logic to and from these classes to have a functioning implementation.
 - Swagger UI auto generated via API Platform
 - Docker image for quick development setup
 
+## Swagger UI
+![alt text](public/images/example1.png)
+
 ## Version Support
-This branch supports the V1 schema, future branches will support further versions.
+This branch supports the V2 schema, future branches will support further versions.

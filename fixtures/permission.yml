@@ -1,3 +1,3 @@
 \App\Security\Entity\Permission:
-  permission_{GET_PRODUCT, GET_PRODUCTS}:
+  permission_{GET_PRODUCT_OFFERING, GET_PRODUCT_OFFERINGS}:
     permission: <current()>

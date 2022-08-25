@@ -6,12 +6,13 @@ use InvalidArgumentException;
 
 class RoleFactory
 {
-    const GET_PRODUCT = 'GET_PRODUCT';
-    const GET_PRODUCTS = 'GET_PRODUCTS';
+    // TODO add further roles as required, each role requires a Role file
+    const GET_PRODUCT_OFFERING = 'GET_PRODUCT_OFFERING';
+    const GET_PRODUCT_OFFERINGS = 'GET_PRODUCT_OFFERINGS';
 
     const ROLES = [
-        self::GET_PRODUCT => GetProductRole::class,
-        self::GET_PRODUCTS => GetProductsRole::class,
+        self::GET_PRODUCT_OFFERING => GetProductOfferingRole::class,
+        self::GET_PRODUCT_OFFERINGS => GetProductOfferingsRole::class,
     ];
 
     public function valid(string $role): bool
@@ -19,6 +20,11 @@ class RoleFactory
         return array_key_exists($role, self::ROLES);
     }
 
+    /**
+     * Create a Role instance of a valid role
+     *
+     * @throw \InvalidArgumentException
+     */
     public function role(string $role): AbstractRole
     {
         if (!$this->valid($role)) {

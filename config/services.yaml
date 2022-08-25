@@ -23,6 +23,11 @@ services:
         decorates: 'api_platform.openapi.factory'
         autoconfigure: false
 
+    Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter: ~
+    Cocur\Slugify\Slugify:
+        arguments:
+            - { separator: '_' }
+
     # Authentication
     security.authentication.provider.key_secret:
         alias: App\Security\Authentication\Provider\KeySecretAuthenticationProvider

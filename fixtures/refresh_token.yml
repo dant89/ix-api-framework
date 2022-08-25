@@ -4,7 +4,7 @@
     sub: '2374019a-6737-3990-ab19-9a5c1f6e2b60'
     valid: <dateTimeBetween('+ 1 hour','+1 day')>
     apiKey: '@apikey_valid_key'
-    permissions: ['@permission_GET_PRODUCT','@permission_GET_PRODUCTS']
+    permissions: ['@permission_GET_PRODUCT_OFFERING','@permission_GET_PRODUCT_OFFERINGS']
 
   refresh_token_past:
     refresh_token: 'EXPIREDREFRESHjasjioqruioqureoiwfhjskldjfklsjfksldjflksdjfl'

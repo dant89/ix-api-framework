@@ -16,6 +16,9 @@
     "behat/gherkin": {
         "version": "v4.9.0"
     },
+    "cocur/slugify": {
+        "version": "v4.2.0"
+    },
     "codeception/codeception": {
         "version": "4.1",
         "recipe": {

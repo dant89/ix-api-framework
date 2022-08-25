@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ApiTestCase extends WebTestCase
 {
+    protected const VALID_API_COMPANY = '12345';
     protected bool $dumpFailedResponses = true;
     protected KernelBrowser $client;
 
