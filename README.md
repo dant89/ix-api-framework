@@ -25,5 +25,13 @@ business logic to and from these classes to have a functioning implementation.
 ## Swagger UI
 ![alt text](public/images/example1.png)
 
+## How to enable certain entities only?
+It is possible to toggle enabled entities via the `config/packages/api_platform.yaml` config file:
+```yaml
+api_platform:
+    mapping:
+        paths:
+```
+
 ## Version Support
 This branch supports the V2 schema, future branches will support further versions.

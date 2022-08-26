@@ -6,7 +6,7 @@ use ApiPlatform\Core\OpenApi\Factory\OpenApiFactoryInterface;
 use ApiPlatform\Core\OpenApi\OpenApi;
 use ApiPlatform\Core\OpenApi\Model;
 
-final class JwtDecorator implements OpenApiFactoryInterface
+final class AuthDecorator implements OpenApiFactoryInterface
 {
     private OpenApiFactoryInterface $decorated;
     protected array $tags = ['Authentication'];

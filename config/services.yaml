@@ -19,7 +19,11 @@ services:
         exclude: '../src/{DependencyInjection,Migrations,Tests,Kernel.php}'
 
     # Documentation modifier
-    App\OpenApi\JwtDecorator:
+    App\OpenApi\AuthDecorator:
+        decorates: 'api_platform.openapi.factory'
+        autoconfigure: false
+
+    App\OpenApi\ProductOfferingDecorator:
         decorates: 'api_platform.openapi.factory'
         autoconfigure: false
 

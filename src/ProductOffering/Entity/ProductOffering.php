@@ -2,10 +2,11 @@
 
 namespace App\ProductOffering\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
-use Symfony\Component\Validator\Constraints as Assert;
 use App\Security\Role\RoleFactory;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(

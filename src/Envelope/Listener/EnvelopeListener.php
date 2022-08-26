@@ -15,6 +15,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
 class EnvelopeListener implements EventSubscriberInterface
 {
     protected EnvelopeService $envelopeService;
+    protected LoggerInterface $logger;
 
     public function __construct(EnvelopeService $envelopeService, LoggerInterface $logger)
     {
@@ -36,7 +37,6 @@ class EnvelopeListener implements EventSubscriberInterface
             return;
         }
         $request = $event->getRequest();
-        // TODO: This fails for anything that isn't an entity, include auth!
         if (!(RequestAttributesExtractor::extractAttributes($request))) {
             return;
         }

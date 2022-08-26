@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Migrations;
 
-use Doctrine\DBAL\DBALException;
+use Doctrine\DBAL\Exception as DBALException;
 use Doctrine\Migrations\AbstractMigration as BaseAbstractMigration;
 
 abstract class AbstractMigration extends BaseAbstractMigration

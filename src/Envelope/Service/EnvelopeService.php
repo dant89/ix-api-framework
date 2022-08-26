@@ -13,7 +13,6 @@ use App\Exception\PermissionDeniedErrorException;
 use App\Exception\ServerErrorException;
 use App\Exception\UnableToFulfillErrorException;
 use App\Exception\ValidationErrorException;
-use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
