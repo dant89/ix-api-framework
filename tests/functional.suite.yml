@@ -15,5 +15,4 @@ modules:
             url: ''
             depends: Symfony
         - Doctrine2:
-
             depends: Symfony
