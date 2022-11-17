@@ -4,13 +4,12 @@
 - IX-API V2 Schema: https://docs.ix-api.net/v2/redoc
 
 ## What is this framework?
-The aim of this project is to provide a base implementation template for the IX-API, this should make it simpler and 
-faster for Internet Exchanges to implement IX-API.
+This project provides a base template for IX-API to make it simpler and faster to implement IX-API.
 
-The project is coded in PHP using [API Platform](https://api-platform.com/) framework, which is written in Symfony.
+The project is written in PHP using the Symfony [API Platform](https://api-platform.com/) framework.
 
 ## How does this framework work?
-API Platform maps class based entities to RESTful API endpoints, this works very well for the IX-API schema.
+API Platform maps class based entities to RESTful API endpoints, this suits the IX-API schema.
 
 All IX-API endpoints have been coded as entity classes, this means all an implementor has to do is map their internal
 business logic to and from these classes to have a functioning implementation.
