@@ -31,10 +31,10 @@ header:before {
 
 header #logo {
     width: 200px;
-    position: fixed;
+    position: absolute;
     top : 125px;
     right: 40px;
-    z-index: 102;
+    z-index: 99;
     transform: translateY(-50%);
 }
 
