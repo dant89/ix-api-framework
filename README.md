@@ -25,12 +25,12 @@ business logic to and from these classes to have a functioning implementation.
 ## Installation
 1. Setup JWT keys with a password, **keep a note of this for the next step**
    ```bash
-   openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096`
+   openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
    openssl pkey -in config/jwt/private.pem -out config/jwt/public.pem -pubout
    ```
 2. Run `cp .env .env.local`
 3. Setup your local environment variables
-    * Change `DATABASE_URL` if required, defaults to local Docker
+    * Change `DATABASE_URL=` if required, defaults to local Docker which handles setup automatically
     * Update `JWT_PASSPHRASE=` according to the step **1**.
 4. Run `docker-compose up`
 5. Browse to `https://localhost`
