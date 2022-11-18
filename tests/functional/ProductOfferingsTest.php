@@ -21,6 +21,6 @@ class ProductOfferingsTest extends ApiTestCase
 
         $this->assertEquals(200, $response->getStatusCode());
 
-        # TODO add further test coverage to suite your requirements
+        # TODO add further test coverage to suite requirements
     }
 }

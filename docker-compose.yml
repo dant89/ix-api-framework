@@ -63,9 +63,9 @@ services:
       MYSQL_USER: ${MYSQL_USER:-api-platform}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:-!ChangeMe!}
     volumes:
-      - db_data:/var/lib/mysql:rw
+      - ./docker/mysql:/var/lib/mysql:rw
     ports:
-      - 3306:3306
+      - ${MYSQL_PORT:-3306}:3306
     entrypoint:
       - /bin/bash
       - -c

@@ -1,5 +1,6 @@
 .idea/
 /bin/
+/docker/mysql/
 
 ###> symfony/framework-bundle ###
 /.env.local

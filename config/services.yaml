@@ -85,6 +85,10 @@ services:
             - "%gesdinet_jwt_refresh_token.ttl_update%"
             - "@event_dispatcher"
 
+    App\Security\Authentication\RoleVoter:
+        tags:
+            - { name: security.voter }
+
     gesdinet.jwtrefreshtoken.authenticator:
         class: App\Security\Authenticator\ApiKeyRoleAwareRefreshTokenAuthenticator
         arguments:
